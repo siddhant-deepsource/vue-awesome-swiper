@@ -1,0 +1,21 @@
+version = 1
+
+test_patterns = ["tests/**"]
+
+exclude_patterns = [
+    "scripts/**",
+    ".github/**"
+]
+
+[[analyzers]]
+name = "javascript"
+enabled = true
+
+  [analyzers.meta]
+  environment = [
+    "nodejs",
+    "jest"
+  ]
+  plugins = ["vue"]
+  dialect = "typescript"
+  module_system = "es-modules"
